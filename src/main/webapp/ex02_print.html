@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//1. 브라우저(화면)에 출력하기 : document.wirte("내용")
+	//	주의사항 : html 문서가 로드된 후에 document.write()를 사용하면 이전에 내용들은 모두 삭제된다.
+	//	head가 body보다는 먼저 실행된다.
+	document.write("안녕 자바스크립트");
+	//줄변경이 되지 않는다.(즉 태그를 사용해야한다.)
+	document.write("안녕 자바스크립트");
+	document.write("<h2>안녕 자바스크립트</h2>");
+	//스타일도 적용된다.
+	document.write("<h2 style='color:red'>안녕 자바스크립트</h2>");
+	document.write('<h2 style="color:tomato">안녕 자바스크립트</h2>');
+	
+	//2. 콘솔에 출력 : console.log("내용"); => 디버깅 목적
+	//	크롬에서 F12를 누른다.
+	console.log("방가방가");
+	console.log('Hi');
+	
+	//3. alert("내용") => 경고창(자세한 내용은 나중에 배움)
+	alert("Welcome")
+	//먼저 화면에 대화상자로 나타난다.
+	
+	//4. innerHTML
+	//기본 태그에 자바스크립트를 이용해서 데이터를 삽입하거나 변경(getter, setter)할 때 사용
+	//document.getElementById("아이디 같은거").innerHTML 등호를 기준으로 왼쪽에 있으면 setter, 오른쪽에 있으면 getter 
+	
+</script>
+</head>
+<body>
+	<h3 style='color:skyblue'>Hello JavaScript</h3>
+	<h3 id="h3">대한민국</h3>
+	<script type="text/javascript">
+		//getter역할
+		var k = document.getElementById("h3").innerHTML;
+		alert(k);
+		//setter역할
+		document.getElementById("h3").innerHTML = "KOREA";
+	</script>
+</body>
+</html>

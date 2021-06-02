@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for문</title>
+<script type="text/javascript">
+// 일반적인 for문은 자바의 for문과 같다.
+// 1 - 10 까지 출력...... &nbsp는 띄어쓰기를 의미한다.
+for (var i = 1; i < 11; i++) {
+	document.write( i + "&nbsp;&nbsp;");
+}
+document.write( "<hr>");
+
+//0~10까지 홀수만 출력
+
+for (var i = 0; i < 11; i++) {
+	if(i % 2 != 0){
+	document.write( i + "&nbsp;&nbsp;");
+	}
+}
+document.write( "<hr>");
+
+
+// 0~10까지 홀수 합 출력
+var result = 0;
+for (var i = 0; i < 11; i++) {
+	if(i % 2 != 0){
+		result += i;
+	}
+}
+document.write( result);
+
+
+document.write( "<hr>");
+
+for (var i = 1; i < 10; i++) {
+	document.write( i * 5 + "&nbsp;&nbsp;");
+}
+
+document.write( "<hr>");
+
+//구구단 1
+for (var i = 2; i < 10; i++) {
+	for(var j = 1; j<10;j++){
+		document.write(i + " * " + j + " = " + i * j + "<br>");
+	}
+}
+
+document.write( "<hr>");
+
+//구구단 2
+for (var i = 2; i < 10; i++) {
+	for(var j = 1; j<10;j++){
+		document.write(i + " * " + j + " = " + i * j + "&nbsp;&nbsp");
+	}
+	document.write("<br>");
+}
+
+document.write( "<hr>");
+
+//구구단 3
+
+for (var i = 1; i < 10; i++) {
+	for(var j = 2; j<10;j++){
+		document.write(j + " * " + i + " = " + i * j + "&nbsp;&nbsp");
+	}
+	document.write("<br>");
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

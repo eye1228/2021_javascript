@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+
+
+
+//8시간 까지는 8720원 초과하면 1.5배
+//근무시간을 받아서 지급할 금액 출력
+
+var time = prompt("근무시간을 쓰세요");
+var result = 0;
+if(time > 8){
+	result = 8 * 8720 + (time-8) * 8720 * 1.5;
+}else{
+	result = time * 8720;
+}
+
+document.write("지급받을 금액 : " + result);
+document.write("<hr>");
+
+
+//받은 점수 k2가 90 이상이면 A, 80이상이면 B 70이상이면 C 나머지는 F
+
+grade =  prompt("점수 입력");
+if(grade >= 90){
+	result = 'A';
+}else if(grade >= 80){
+	result = 'B';
+}else if(grade >= 70){
+	result = 'C';
+}else{
+	result = 'F';
+}
+
+document.write("학점 등급 : " + result);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
